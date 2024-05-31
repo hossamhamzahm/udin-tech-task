@@ -55,7 +55,7 @@ const create = async (req: Request, res: Response) => {
     try {
         const validated_product = await ProductSchema.validateAsync(req.body)
         const product = await Product.create(validated_product.product)
-        res.status(201).send(product);
+        res.status(201).send({ product });
     }
     catch (e: unknown) {
         const message = (e as Error).message

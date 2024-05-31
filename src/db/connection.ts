@@ -12,6 +12,7 @@ const db_url = get_config("NODE_ENV") == 'prod' ? get_config("DB_URL") : get_con
 const connection = new Sequelize({
     dialect: 'sqlite',
     storage: db_url,
+    logging: false
 });
 
 

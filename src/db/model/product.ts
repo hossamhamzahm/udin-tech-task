@@ -46,7 +46,10 @@ Product.init(
             allowNull: false
         }
     },
-    { sequelize: connection },
+    { 
+        sequelize: connection,
+        timestamps: true
+    },
 );
 
 

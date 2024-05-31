@@ -47,6 +47,9 @@ Product.init(
         }
     },
     { 
+        defaultScope: {
+            attributes: { exclude: ['pk'] }
+        },
         sequelize: connection,
         timestamps: true
     },
